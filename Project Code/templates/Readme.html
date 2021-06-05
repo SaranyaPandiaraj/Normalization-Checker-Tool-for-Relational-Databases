@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Normalization Checker Tool For Relational Databases</title>
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
+   </head>
+   <body>
+      <h1>
+         <center>How to Use this Tool?</center>
+      </h1>
+      <hr>
+      </hr>
+      <br><br>
+      <div>
+         <p> &nbsp; &nbsp; &nbsp; &nbsp;  The Normalization Automated tool for a relational databases has the below sections :
+         </p>
+         <hr>
+         </hr>
+         <ul>
+            <li>
+               <h2><u>Home</u></h2>
+            </li>
+            <p> Home Section tells about the process of Normalization and Why we need to do Normalization.  </p>
+            <li>
+               <h2><u>About</u></h2>
+            </li>
+            <p> About Section tells Why this automated tool for and What it does. </p>
+            <hr>
+            </hr>
+            <li>
+               <h2><u>Legacy System - Functional Dependency (FD)</u></h2>
+            </li>
+            <p> Functional Dependency section helps you to identify the functional dependencies for Legacy systems given a table/file.</p>
+            <h3><u>Steps to follow to identify the FD's </u></h3>
+            <ul>
+               <li>Select the Mode for retrieving the Data </li>
+               <br/>
+               <li>If the Mode Selected is Database; </li>
+               <br/>
+               <ul>
+                  <li>Enter the Database Credentials of Your Legacy System (Supports only Mysql)</li>
+                  <li>Enter the User Name, Password, Datasbase Name, Host Name & Table Name (you wish to retrieve the FD's)</li>
+                  <li>After entering the Credentials, Click on Create Functional Dependency Button to retrieve the FD's</li>
+               </ul>
+               <br/>
+               <li>If the Mode Selected is Upload File;</li>
+               <br/>
+               <ul>
+                  <li>Choose the required file and upload it</li>
+                  <li>Click on Create Functional Dependency Button to retrieve the FD's</li>
+               </ul>
+            </ul>
+            <br>
+            <hr>
+            </hr>
+            <li>
+               <h2><u>First Normal Form (1NF)</u></h2>
+            </li>
+            <p> First Normal Form section helps you to identify if a given table/file is in 1NF or not.</p>
+            <h3><u>Steps to follow to identify if a data is in 1NF</u></h3>
+            <ul>
+               <li>Select the Mode for retrieving the Data </li>
+               <br/>
+               <li>If the Mode Selected is Database; </li>
+               <br/>
+               <ul>
+                  <li>Enter the Database Credentials of Your Legacy System (Supports only Mysql)</li>
+                  <li>Enter the User Name, Password, DatasBase Name, Host Name & Table Name (you wish to retrieve the FD's)</li>
+                  <li>After entering the Credentials, Click on Check for 1NF Button to check if the Data is in 1NF or not</li>
+               </ul>
+               <br/>
+               <li>If the Mode Selected is Upload File;</li>
+               <br/>
+               <ul>
+                  <li>Choose the required file and upload it</li>
+                  <li>Click on Check for 1NF Button to check if the Data is in 1NF or not</li>
+               </ul>
+            </ul>
+            <br>
+            <hr>
+            </hr>
+            <li>
+               <h2><u>Second Normal Form (2NF)</u></h2>
+            </li>
+            <p> Second Normal Form section helps you to normalize the given data in 2NF.</p>
+            <h3><u>Steps to follow to normalize the data in 2NF</u></h3>
+            <ul>
+               <li>Enter the attributes of a relation/table/file (separated by commas : for ex. A,B,C,D,E) </li>
+               <br/>
+               <li>Enter each Functional Dependency in a single line and then press enter to input the next FD as given in the placeholder of the text area</li>
+               <br/>
+               <li>Click on Normalize to 2NF Button to retrieve the 2NF Proposal</li>
+               <br/>
+            </ul>
+            <br>
+            <hr>
+            </hr>
+            <li>
+               <h2><u>Third Normal Form (3NF)</u></h2>
+            </li>
+            <p> Third Normal Form section helps you to normalize the given data in 3NF.</p>
+            <h3><u>Steps to follow to normalize the data in 3NF</u></h3>
+            <ul>
+               <li>Enter the attributes of a relation/table/file (separated by commas : for ex. A,B,C,D,E) </li>
+               <br/>
+               <li>Enter each Functional Dependency in a single line and then press enter to input the next FD as given in the placeholder of the text area</li>
+               <br/>
+               <li>Click on Normalize to 3NF Button to retrieve the 3NF Proposal</li>
+               <br/>
+            </ul>
+            <br>
+            <hr>
+            </hr>
+            <li>
+               <h2><u>Boyce-Codd Normal Form (BCNF)</u></h2>
+            </li>
+            <p> BCNF section helps you to normalize the given data in BCNF.</p>
+            <h3><u>Steps to follow to normalize the data in BCNF</u></h3>
+            <ul>
+               <li>Enter the attributes of a relation/table/file (separated by commas : for ex. A,B,C,D,E) </li>
+               <br/>
+               <li>Enter each Functional Dependency in a single line and then press enter to input the next FD as given in the placeholder of the text area</li>
+               <br/>
+               <li>Click on Normalize to BCNF Button to retrieve the BCNF Proposal</li>
+               <br/>
+            </ul>
+         </ul>
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;
+         </p>
+         <br/><br/>
+      </div>
+   </body>
+</html>

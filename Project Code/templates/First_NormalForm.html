@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+   <head>
+      <title>First Normal Form</title>
+      <script src= "https://code.jquery.com/jquery-1.12.4.min.js"> </script>
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
+   </head>
+   <body>
+      <center>
+         <h2>First Normal Form</h2>
+         <hr>
+         </hr>
+         <div class="radio"> 
+            <strong> Select the mode to retrieve the data </strong> 
+            <br><br><br>
+            <label> 
+            <input type="radio" name="colorRadio" value="db"> Database (MySQL) 
+            </label> 
+            <label> 
+            <input type="radio" name="colorRadio" value="upload"> Upload File 
+            </label> 
+         </div>
+      </center>
+      <div class="db selectt">
+         <hr></hr>
+         <p>
+            <b>
+         <center>Enter the Database Credentials and Details Of your Legacy System</b></p>
+         <form method="post" action="/1NF">
+         <h4>User Name  </h4>
+         <input type="text" placeholder="Enter Username" name="user" id ="user">
+         <h4>Password</h4>
+         <input type="password"  placeholder="Enter Password" name="password" id="password" value="{{request.form.password }}" >
+         <h4>Database Name </h4>
+         <input type="text"  placeholder="Enter Database Name" name="database" id="database" >
+         <h4>Host Name </h4>
+         <input type="text"  placeholder="Enter Host Name" name="host" id="host" >
+         <h4>Table Name  </h4>
+         <input type="text"  placeholder="Enter Table Name" name="table" id="table" ><br/>
+         <p><input type="submit" value="Check for 1NF" /></p>
+         </form>
+      </div>
+      </center>
+      <center>
+         <div class="row">
+            {% autoescape false %}
+            <pre> {{ db_output }} </pre>
+            {% endautoescape %}
+         </div>
+      </center>
+      <div class="upload selectt">
+         <center>
+            <br>
+            <form action = "/1NF_upload" method = "POST" enctype = "multipart/form-data">
+               <input type = "file" name = "file" />
+               <br><br><br>
+               <input type = "submit" value="Check for 1NF"/>
+          
+         </center>
+         </form>  
+      </div>
+      <center>
+         <div class="row">
+            {% autoescape false %}
+            <pre> {{ file_output }} </pre>
+            {% endautoescape %}
+         </div>
+      </center>
+      <script type="text/javascript"> 
+         $(document).ready(function() { 
+             $('input[type="radio"]').click(function() { 
+                 var inputValue = $(this).attr("value"); 
+                 var targetBox = $("." + inputValue); 
+                 $(".selectt").not(targetBox).hide(); 
+                 $(".row").not(targetBox).hide(); 
+                 $(targetBox).show(); 
+             }); 
+         }); 
+      </script>
+   </body>
+</html>

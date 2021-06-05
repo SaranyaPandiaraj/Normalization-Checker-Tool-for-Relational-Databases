@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Normalization Checker Tool For Relational Databases</title>
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
+   </head>
+   <body>
+      <h1>
+         <center>Normalization</center>
+      </h1>
+      <hr>
+      </hr>
+      <br>
+      <div class="home">
+         <p> &nbsp; &nbsp; &nbsp; &nbsp;  Normalization is a very important phase in a database to ensure that only the related data is stored in the respective tables. 
+            It takes the attributes and the functional dependencies from any bigger relations to produce smaller relational schemas. 
+            Thus, minimizes the redundancy (duplicate data) and certain anomalies like insert, delete, and update. 
+         </p>
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;  The stages of organizing the data are known as “Normal Forms” which helps in redesigning the database and ensuring to satisfy 
+            all the different types of normal forms. Normal forms are carried out in the following stages :
+         </p>
+         <ul class="norm">
+            <li>First Normal Form (1NF)</li>
+            <li>Second Normal Form (2NF)</li>
+            <li>Third Normal Form (3NF)</li>
+            <li>Boyce-Codd Normal Form (BCNF)</li>
+            <li>Fourth Normal Form (4NF)</li>
+            <li>Fifth Normal Form (5NF)</li>
+            <li>Sixth Normal Form (6NF)</li>
+         </ul>
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; In most of the organization, Third Normal Form (3NF) is considered to be the most adequate relational database design 
+            which always ensures functional dependency preserving and lossless. 
+            3NF is sufficient enough since most of the 3NF tables are free from the insert, update and delete anomalies. 
+         </p>
+         <br/><br/>
+      </div>
+      <center>
+         <div class="slideshow-container">
+            <div class="mySlides fade">
+               <div class="numbertext">1 / 6</div>
+               <img src="../static/images/1NF.jpg" style="width:100%">
+               <div class="text">First Normal Form</div>
+            </div>
+            <div class="mySlides fade">
+               <div class="numbertext">2 / 6</div>
+               <img src="../static/images/2NF.jpg" style="width:100%">
+               <div class="text">Second Normal Form</div>
+            </div>
+            <div class="mySlides fade">
+               <div class="numbertext">3 / 6</div>
+               <img src="../static/images/3NF.jpg" style="width:100%">
+               <div class="text">Third Normal Form</div>
+            </div>
+            <div class="mySlides fade">
+               <div class="numbertext">4 / 6</div>
+               <img src="../static/images/BCNF.jpg" style="width:100%">
+               <div class="text">Third Normal Form</div>
+            </div>
+            <div class="mySlides fade">
+               <div class="numbertext">5 / 6</div>
+               <img src="../static/images/4NF.jpg" style="width:100%">
+               <div class="text">Third Normal Form</div>
+            </div>
+            <div class="mySlides fade">
+               <div class="numbertext">6 / 6</div>
+               <img src="../static/images/5NF.jpg" style="width:100%">
+               <div class="text">Third Normal Form</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+         </div>
+         <br>
+         <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+            <span class="dot" onclick="currentSlide(6)"></span>  
+         </div>
+      </center>
+      <script>
+         var slideIndex = 1;
+         showSlides(slideIndex);
+         
+         function plusSlides(n) {
+           showSlides(slideIndex += n);
+         }
+         
+         function currentSlide(n) {
+           showSlides(slideIndex = n);
+         }
+         
+         function showSlides(n) {
+           var i;
+           var slides = document.getElementsByClassName("mySlides");
+           var dots = document.getElementsByClassName("dot");
+           if (n > slides.length) {slideIndex = 1}    
+           if (n < 1) {slideIndex = slides.length}
+           for (i = 0; i < slides.length; i++) {
+               slides[i].style.display = "none";  
+           }
+           for (i = 0; i < dots.length; i++) {
+               dots[i].className = dots[i].className.replace(" active", "");
+           }
+           slides[slideIndex-1].style.display = "block";  
+           dots[slideIndex-1].className += " active";
+         }
+      </script>
+   </body>
+</html>

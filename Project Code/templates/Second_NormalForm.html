@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Second Normal Form</title>
+      <script src= "https://code.jquery.com/jquery-1.12.4.min.js"> </script>
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
+   </head>
+   <body>
+      <center>
+         <h2>Second Normal Form</h2>
+         <hr>
+         </hr>
+      </center>
+      <center>
+         <form method="post" action="/2NF">
+            <h4>Enter the attributes <i class="small">(separated by commas) </i></h4>
+            <input type="text" placeholder="A,B,C,D,E" name="attr" id ="attr"> 
+            <h4>Enter the Functional Dependency </h4>
+            <textarea name="fdlist" placeholder="A->B &#10;C->E" rows="10" cols="42", spellcheck="false"></textarea>
+            <p><input type="submit" value="Normalize to 2NF" /></p>
+         </form>
+         </div> 
+      </center>
+      <center>
+         <div class="row">
+            {% autoescape false %}
+            <pre> {{ Second_NF_output }} </pre>
+            {% endautoescape %}
+         </div>
+      </center>
+   </body>
+</html>
